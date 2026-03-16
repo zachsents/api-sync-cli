@@ -1,6 +1,8 @@
 {
   "name": "@zachsents/api-sync-cli",
   "version": "0.0.1",
+  "license": "MIT",
+  "author": "Zach Sents",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
