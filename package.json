@@ -1,0 +1,28 @@
+{
+  "name": "@zachsents/api-sync-cli",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "api-sync": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "typecheck": "command -v tsgo >/dev/null && tsgo --noEmit || tsc --noEmit",
+    "lint": "oxlint --type-aware --fix --fix-suggestions",
+    "format": "prettier --cache --write .",
+    "fix": "bun run lint && bun run format",
+    "check": "bun run typecheck && bun run fix",
+    "build": "bun build src/index.ts --outdir=dist --target=node"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "oxlint": "^1.50.0",
+    "oxlint-tsgolint": "^0.15.0",
+    "prettier": "^3.7.4",
+    "prettier-plugin-jsdoc": "^1.8.0",
+    "typescript": "^5.9.3"
+  }
+}

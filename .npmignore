@@ -1,0 +1,6 @@
+src
+.github
+node_modules
+*.tsbuildinfo
+.env*
+*.log
